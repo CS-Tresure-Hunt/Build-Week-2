@@ -185,6 +185,67 @@
 }
 
 {
+"room_id": 216,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(56,67)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 219,
+"title": "A misty room",
+"description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
+"coordinates": "(57,68)",
+"elevation": 0,
+"terrain": "NORMAL",
+"players": [],
+"items": [],
+"exits": [
+"s"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
+"room_id": 234,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(56,68)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
 "room_id": 237,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -215,6 +276,26 @@
 "items": [],
 "exits": [
 "s",
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 252,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,68)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
 "e"
 ],
 "cooldown": 15.0,
@@ -266,6 +347,27 @@
 }
 
 {
+"room_id": 284,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,69)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
 "room_id": 299,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -282,6 +384,27 @@
 "errors": [],
 "messages": [
 "You have walked east."
+]
+}
+
+{
+"room_id": 302,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,70)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked north.",
+"It's a trap!: +30s CD"
 ]
 }
 
@@ -446,6 +569,25 @@
 }
 
 {
+"room_id": 368,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(56,69)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
 "room_id": 372,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -501,6 +643,48 @@
 "errors": [],
 "messages": [
 "You have walked east."
+]
+}
+
+{
+"room_id": 422,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,71)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked north.",
+"It's a trap!: +30s CD"
+]
+}
+
+{
+"room_id": 426,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,72)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked north.",
+"It's a trap!: +30s CD"
 ]
 }
 
