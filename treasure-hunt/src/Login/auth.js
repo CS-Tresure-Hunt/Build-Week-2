@@ -33,7 +33,7 @@ const auth = Map => SignIn =>
         })
         .then(res => {
           console.log(res.data);
-          if (res.status == 200) {
+          if (res.status === 200) {
             setTimeout(() => {
               localStorage.setItem("token", this.state.token);
               this.setState({
@@ -57,12 +57,12 @@ const auth = Map => SignIn =>
 
     render() {
       if (localStorage.getItem("token")) {
-        return <Map logOut={this.signOut} loggedIn={this.state.loggedIn} />;
+        return <Map logOut={this.logOut} loggedIn={this.state.loggedIn} />;
       } else {
         return (
           <SignIn
             handleChanges={this.handleChanges}
-            logIn={this.signIn}
+            logIn={this.logIn}
             name={this.state.name}
             token={this.state.token}
           />

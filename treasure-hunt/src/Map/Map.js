@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import MapData from "./MapData";
 
 export class Map extends Component {
   state = {
@@ -137,7 +138,22 @@ export class Map extends Component {
   };
 
   render() {
-    return <div className="Map">Map</div>;
+    return (
+      <div className="Map">
+        <MapData
+          signOut={this.props.signOut}
+          playerStats={this.playerStats}
+          playerStatus={this.state.playerStatus}
+          takeItem={this.takeItem}
+          exits={this.state.exits}
+          roomData={this.state.roomData}
+          movePlayer={this.movePlayer}
+          players={this.state.players}
+          items={this.state.items}
+          pray={this.pray}
+        />
+      </div>
+    );
   }
 }
 

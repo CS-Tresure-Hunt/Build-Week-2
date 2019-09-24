@@ -369,6 +369,26 @@
 }
 
 {
+"room_id": 259,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,66)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked south."
+]
+}
+
+{
 "room_id": 263,
 "title": "A Dark Cave",
 "description": "You are standing in a dark cave.",
@@ -409,6 +429,26 @@
 }
 
 {
+"room_id": 275,
+"title": "A misty room",
+"description": "You are standing on grass and surrounded by a dense mist. You notice a cave entrance to the east and cliffside landmark to the west.",
+"coordinates": "(53,67)",
+"elevation": 0,
+"terrain": "NORMAL",
+"players": [],
+"items": [],
+"exits": [
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
 "room_id": 284,
 "title": "A Dark Cave",
 "description": "You are standing in a dark cave.",
@@ -428,6 +468,27 @@
 "You have walked north."
 ]
 }
+
+{
+"room_id": 287,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,68)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
 
 {
 "room_id": 299,
@@ -481,6 +542,26 @@
 "items": [],
 "exits": [
 "n",
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 310,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,66)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
 "e",
 "w"
 ],
@@ -588,6 +669,27 @@
 "errors": [],
 "messages": [
 "You have walked north."
+]
+}
+
+{
+"room_id": 339,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,68)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"e",
+"w"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked west.",
+"It's a trap!: +30s CD"
 ]
 }
 
@@ -711,6 +813,7 @@
 ]
 }
 
+
 {
 "room_id": 404,
 "title": "A misty room",
@@ -808,6 +911,26 @@
 "errors": [],
 "messages": [
 "You have walked east."
+]
+}
+
+{
+"room_id": 412,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(52,66)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s",
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
 ]
 }
 
@@ -994,6 +1117,26 @@
 }
 
 {
+"room_id": 456,
+"title": "A misty room",
+"description": "You are standing on grass and surrounded by a dense mist. You notice a cave entrance to the east and cliffside landmark to the west.",
+"coordinates": "(52,67)",
+"elevation": 0,
+"terrain": "NORMAL",
+"players": [],
+"items": [],
+"exits": [
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
 "room_id": 457,
 "title": "A Dark Cave",
 "description": "You are standing in a dark cave.",
@@ -1145,5 +1288,43 @@
 "errors": [],
 "messages": [
 "You have walked north."
+]
+}
+
+{
+"room_id": 488,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(52,65)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked south."
+]
+}
+
+{
+"room_id": 499,
+"title": "Glasowyn's Grave",
+"description": "You see a moss-topped gravestone which reads: 'Here lies Glasowyn of Web17/Labs12/CS18, who was crushed under the weight of her own gold.' There doesn't seem to be any gold around, but marks in the dirt suggest that someone has knelt there, perhaps in prayer.",
+"coordinates": "(51,67)",
+"elevation": 0,
+"terrain": "NORMAL",
+"players": [],
+"items": [],
+"exits": [
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
 ]
 }

@@ -29,7 +29,7 @@ export class SignIn extends Component {
           </div>
         </form>
         <div className="loginButtonContainer">
-          <button onClick={this.props.signIn}>Login</button>
+          <button onClick={this.props.logIn}>Login</button>
         </div>
       </div>
     );

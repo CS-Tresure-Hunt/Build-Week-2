@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App.scss";
-import { withRouter, Switch } from "react-router-dom";
+import "./App.css";
+import { withRouter } from "react-router-dom";
 import Map from "./Map/Map";
 import SignIn from "./Login/SignIn";
 import auth from "./Login/auth";
