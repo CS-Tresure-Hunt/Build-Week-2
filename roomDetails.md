@@ -409,6 +409,27 @@
 }
 
 {
+"room_id": 303,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,69)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
 "room_id": 311,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -549,6 +570,27 @@
 }
 
 {
+"room_id": 361,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,70)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked north.",
+"It's a trap!: +30s CD"
+]
+}
+
+{
 "room_id": 363,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -628,6 +670,67 @@
 }
 
 {
+"room_id": 405,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,69)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 406,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,70)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
+"room_id": 408,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,71)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
 "room_id": 411,
 "title": "A misty room",
 "description": "You are standing on grass and surrounded by a dense mist. You can barely make out the exits in any direction.",
@@ -643,6 +746,48 @@
 "errors": [],
 "messages": [
 "You have walked east."
+]
+}
+
+{
+"room_id": 415,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(52,70)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"e",
+"w"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked west.",
+"It's a trap!: +30s CD"
+]
+}
+
+{
+"room_id": 418,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(51,70)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s",
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
 ]
 }
 
@@ -664,6 +809,46 @@
 "messages": [
 "You have walked north.",
 "It's a trap!: +30s CD"
+]
+}
+
+{
+"room_id": 423,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,71)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"e",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 425,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(51,71)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
 ]
 }
 
@@ -723,6 +908,162 @@
 "errors": [],
 "messages": [
 "You have walked north."
+]
+}
+
+{
+"room_id": 454,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(52,71)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 457,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(55,73)",
+"elevation": 0,
+"terrain": "TRAP",
+"players": [],
+"items": [],
+"exits": [
+"n",
+"s"
+],
+"cooldown": 45.0,
+"errors": [],
+"messages": [
+"You have walked north.",
+"It's a trap!: +30s CD"
+]
+}
+
+{
+"room_id": 458,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(54,72)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s",
+"w"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
+"room_id": 459,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(53,72)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 461,
+"title": "Linh's Shrine",
+"description": "You are standing before a glowing shrine to a Linh, the Swift. She looks quite fast.",
+"coordinates": "(55,74)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
+"room_id": 469,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(50,71)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"e"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked west."
+]
+}
+
+{
+"room_id": 470,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(52,72)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"s"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked north."
+]
+}
+
+{
+"room_id": 474,
+"title": "A Dark Cave",
+"description": "You are standing in a dark cave.",
+"coordinates": "(51,69)",
+"elevation": 0,
+"terrain": "CAVE",
+"players": [],
+"items": [],
+"exits": [
+"n"
+],
+"cooldown": 15.0,
+"errors": [],
+"messages": [
+"You have walked south."
 ]
 }
 
