@@ -65,17 +65,14 @@ export class Map extends Component {
 
   movePlayer = direction => {
     axios
-      .post(
-        "https://lambda-treasure-hunt.herokuapp.com/api/adv/move/",
-        {
-          headers: {
-            Authorization: `Token ${localStorage.token}`
-          }
-        },
-        {
+      .post("https://lambda-treasure-hunt.herokuapp.com/api/adv/move/", {
+        data: {
           direction: direction
+        },
+        headers: {
+          Authorization: `Token ${localStorage.token}`
         }
-      )
+      })
       .then(res => {
         console.log(res.data);
         this.setState({
