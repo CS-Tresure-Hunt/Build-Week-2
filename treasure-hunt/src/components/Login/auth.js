@@ -3,7 +3,7 @@ import axios from "axios";
 
 const url = "https://lambda-treasure-hunt.herokuapp.com/api/adv/";
 
-const auth = Map => SignIn =>
+const auth = Game => SignIn =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -36,6 +36,7 @@ const auth = Map => SignIn =>
           if (res.status === 200) {
             setTimeout(() => {
               localStorage.setItem("token", this.state.token);
+              localStorage.setItem("name", this.state.name);
               this.setState({
                 loggedIn: true
               });
@@ -57,7 +58,13 @@ const auth = Map => SignIn =>
 
     render() {
       if (localStorage.getItem("token")) {
-        return <Map logOut={this.logOut} loggedIn={this.state.loggedIn} />;
+        return (
+          <Game
+            logOut={this.logOut}
+            loggedIn={this.state.loggedIn}
+            name={this.state.name}
+          />
+        );
       } else {
         return (
           <SignIn

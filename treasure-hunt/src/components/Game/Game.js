@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
-import MapData from "./MapData";
+import MapData from "../Controls/MapData";
 
-export class Map extends Component {
+export class Game extends Component {
   state = {
     roomData: [],
     players: [],
     exits: [],
     items: [],
     currentRoom: [],
-    playerStatus: []
+    playerStatus: [],
+    name: localStorage.getItem("name")
   };
 
   componentDidMount = () => {
@@ -24,7 +25,6 @@ export class Map extends Component {
         }
       })
       .then(res => {
-        console.log(res.data);
         this.setState({
           exits: res.data.exits,
           roomData: res.data,
@@ -65,14 +65,15 @@ export class Map extends Component {
 
   movePlayer = direction => {
     axios
-      .post("https://lambda-treasure-hunt.herokuapp.com/api/adv/move/", {
-        data: {
-          direction: direction
-        },
-        headers: {
-          Authorization: `Token ${localStorage.token}`
+      .post(
+        `https://lambda-treasure-hunt.herokuapp.com/api/adv/move/`,
+        { direction: direction },
+        {
+          headers: {
+            Authorization: `Token ${localStorage.token}`
+          }
         }
-      })
+      )
       .then(res => {
         console.log(res.data);
         this.setState({
@@ -108,10 +109,30 @@ export class Map extends Component {
       });
   };
 
-  handleNameChange = event => {
-    this.setState({
-      name: event.target.value
-    });
+  nameChange = name => {
+    console.log(name);
+    axios
+      .post(
+        "https://lambda-treasure-hunt.herokuapp.com/api/adv/change_name/",
+        {
+          name: name,
+          confirm: "aye"
+        },
+        {
+          headers: {
+            Authorization: `Token ${localStorage.token}`
+          }
+        }
+      )
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          roomData: res.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   pray = () => {
@@ -136,9 +157,67 @@ export class Map extends Component {
       });
   };
 
+  sell = () => {
+    axios
+      .post(
+        "https://lambda-treasure-hunt.herokuapp.com/api/adv/sell/",
+        {
+          name: "tiny treasure",
+          confirm: "yes"
+        },
+        {
+          headers: {
+            Authorization: `Token ${localStorage.token}`
+          }
+        }
+      )
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          roomData: res.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  getTrueName = () => {
+    axios
+      .post(
+        "https://lambda-treasure-hunt.herokuapp.com/api/adv/change_name/",
+        {
+          confirm: "aye",
+          name: this.state.name
+        },
+        {
+          headers: {
+            Authorization: `Token ${localStorage.token}`
+          }
+        }
+      )
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          roomData: res.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  handleNameChange = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
   render() {
+    console.log(this.props);
+
     return (
-      <div className="Map">
+      <div className="Main">
         <MapData
           signOut={this.props.signOut}
           playerStats={this.playerStats}
@@ -146,14 +225,19 @@ export class Map extends Component {
           takeItem={this.takeItem}
           exits={this.state.exits}
           roomData={this.state.roomData}
+          name={this.state.name}
           movePlayer={this.movePlayer}
           players={this.state.players}
           items={this.state.items}
+          nameChange={this.nameChange}
+          name={this.state.name}
           pray={this.pray}
+          sell={this.sell}
+          getTrueName={this.getTrueName}
         />
       </div>
     );
   }
 }
 
-export default Map;
+export default Game;
