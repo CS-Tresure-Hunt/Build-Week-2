@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import MapData from "../Controls/MapData";
+import Controls from "../Controls/Controls";
+import Blockchain from "../Proof/Blockchain";
 
 export class Game extends Component {
   state = {
@@ -218,14 +219,13 @@ export class Game extends Component {
 
     return (
       <div className="Main">
-        <MapData
+        <Controls
           signOut={this.props.signOut}
           playerStats={this.playerStats}
           playerStatus={this.state.playerStatus}
           takeItem={this.takeItem}
           exits={this.state.exits}
           roomData={this.state.roomData}
-          name={this.state.name}
           movePlayer={this.movePlayer}
           players={this.state.players}
           items={this.state.items}
@@ -235,6 +235,7 @@ export class Game extends Component {
           sell={this.sell}
           getTrueName={this.getTrueName}
         />
+        <Blockchain />
       </div>
     );
   }
