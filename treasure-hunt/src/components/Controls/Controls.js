@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class MapData extends Component {
+export class Controls extends Component {
   state = {
     coolDown: 0
   };
@@ -33,9 +33,10 @@ export class MapData extends Component {
 
   render() {
     const dir = ["n", "s", "e", "w"];
+    console.log(this.props);
     return (
       <div className="mapDataWrapper">
-        <h2>Data</h2>
+        <h2>Lets Start the Hunt</h2>
         <div className="roomAndCoords">
           <h1>Room {this.props.roomData.room_id}</h1>
           <h1>{this.props.roomData.coordinates}</h1>
@@ -63,18 +64,20 @@ export class MapData extends Component {
           </div>
         </div>
 
-        <div className="game-buttons">
-          <h3 className="player-message">{this.props.roomData.messages}</h3>
+        <div>
+          <h3>{this.props.roomData.messages}</h3>
           <h3>{this.props.roomData.errors}</h3>
           <h2 id="timer">Cool Down: {this.state.coolDown}</h2>
-
-          <div className="directionButtons">
+          <h2>You can only go:</h2>
+          {this.props.exits.map(exit => {
+            return (
+              <span>
+                {exit} {""}
+              </span>
+            );
+          })}
+          <div>
             <button
-              className={
-                this.props.exits.includes(dir[0])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[0]);
               }}
@@ -82,11 +85,6 @@ export class MapData extends Component {
               N
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[1])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[1]);
               }}
@@ -94,11 +92,6 @@ export class MapData extends Component {
               S
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[2])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[2]);
               }}
@@ -106,20 +99,15 @@ export class MapData extends Component {
               E
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[3])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[3]);
               }}
             >
               W
             </button>
-          </div>
-          <div className="logout">
-            <button onClick={this.props.signOut}>Log Out</button>
+            <button onClick={this.props.playerStats}>Status</button>
+            <button onClick={this.props.sell}>Sell Treasure</button>
+            <button onClick={this.props.getTrueName}>New Name</button>
           </div>
         </div>
       </div>
@@ -127,4 +115,4 @@ export class MapData extends Component {
   }
 }
 
-export default MapData;
+export default Controls;
