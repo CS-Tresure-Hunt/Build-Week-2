@@ -64,18 +64,20 @@ export class Controls extends Component {
           </div>
         </div>
 
-        <div className="game-buttons">
-          <h3 className="player-message">{this.props.roomData.messages}</h3>
+        <div>
+          <h3>{this.props.roomData.messages}</h3>
           <h3>{this.props.roomData.errors}</h3>
           <h2 id="timer">Cool Down: {this.state.coolDown}</h2>
-          <h3>You can only go {this.props.exits}</h3>
-          <div className="directionButtons">
+          <h2>You can only go:</h2>
+          {this.props.exits.map(exit => {
+            return (
+              <span>
+                {exit} {""}
+              </span>
+            );
+          })}
+          <div>
             <button
-              className={
-                this.props.exits.includes(dir[0])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[0]);
               }}
@@ -83,11 +85,6 @@ export class Controls extends Component {
               N
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[1])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[1]);
               }}
@@ -95,11 +92,6 @@ export class Controls extends Component {
               S
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[2])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[2]);
               }}
@@ -107,11 +99,6 @@ export class Controls extends Component {
               E
             </button>
             <button
-              className={
-                this.props.exits.includes(dir[3])
-                  ? "button availableButton"
-                  : "button regularButton"
-              }
               onClick={() => {
                 this.props.movePlayer(dir[3]);
               }}

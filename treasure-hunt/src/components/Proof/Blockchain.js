@@ -5,7 +5,7 @@ import axios from "axios";
 class Blockchain extends React.Component {
   state = {
     proof: 0,
-    difficulty: 2,
+    difficulty: 0,
     coinsMined: 0
   };
 
@@ -13,7 +13,7 @@ class Blockchain extends React.Component {
     let proof = this.state.proof;
 
     do {
-      proof += 1;
+      proof += Math.floor(Math.random(1, 21) * 5);
       console.log(`Proof found: ${proof}`);
     } while (this.validProof(lastProof, proof) === false);
 
@@ -21,7 +21,14 @@ class Blockchain extends React.Component {
   };
 
   validProof = (lastProof, proof) => {
-    // needs work
+    let guess = encodeURI(`${lastProof}${proof}`);
+    let guess_hash = `${SHA256(guess)}`;
+    let leadingZeros = guess_hash;
+
+    return (
+      guess_hash.substring(0, this.state.difficulty) ===
+      `${leadingZeros.padStart(this.state.difficulty + 1, "0")}`
+    );
   };
 
   getProof = () => {
@@ -60,10 +67,7 @@ class Blockchain extends React.Component {
         }
       )
       .then(res => {
-        if (res.data.message === "New Block Forged") {
-          console.log("Ya got one");
-        }
-        console.log(res.data);
+        console.log("Successfully Mined a coin!", res.data);
       })
       .catch(err => {
         console.log(err.message);

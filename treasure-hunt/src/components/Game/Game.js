@@ -215,12 +215,9 @@ export class Game extends Component {
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <div className="Main">
         <Controls
-          signOut={this.props.signOut}
           playerStats={this.playerStats}
           playerStatus={this.state.playerStatus}
           takeItem={this.takeItem}
